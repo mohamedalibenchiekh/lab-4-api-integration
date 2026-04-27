@@ -4,11 +4,13 @@ import AddPostForm from './components/AddPostForm';
 import WeatherApp from './components/WeatherApp';
 import GitHubUserLookup from './components/GitHubUserLookup';
 import SlowAPIComponent from './components/SlowAPIComponent';
+import BookSearch from './components/BookSearch';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <BookSearch />
       <SlowAPIComponent />
       <WeatherApp />
       <GitHubUserLookup />
