@@ -11,11 +11,13 @@ import CancelableDataFetcher from './components/CancelableDataFetcher';
 import AdvancedSearch from './components/AdvancedSearch';
 import CachedPokemon from './components/CachedPokemon';
 import CachedWeatherApp from './components/CachedWeatherApp';
+import TTLCacheDemo from './components/TTLCacheDemo';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <TTLCacheDemo />
       <CachedWeatherApp />
       <CachedPokemon />
       <AdvancedSearch />
