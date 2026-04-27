@@ -38,15 +38,16 @@ function useWeather(latitude, longitude) {
         setWeatherData(transformed);
         setLastUpdated(Date.now());
       }
-    } catch (err) {
+    } catch {
       setError('Failed to fetch weather data. Please try again.');
     } finally {
       setLoading(false);
     }
-  }, [latitude, longitude, cacheKey]);
+  }, [latitude, longitude, cacheKey, TTL]);
 
   useEffect(() => {
     if (latitude && longitude) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       fetchWeather();
     }
   }, [latitude, longitude, fetchWeather]);

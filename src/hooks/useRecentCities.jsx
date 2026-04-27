@@ -4,19 +4,18 @@ const MAX_RECENT_CITIES = 5;
 const STORAGE_KEY = 'recentCities';
 
 function useRecentCities() {
-  const [recentCities, setRecentCities] = useState([]);
-
-  // Load from localStorage on mount
-  useEffect(() => {
+  const [recentCities, setRecentCities] = useState(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
       try {
-        setRecentCities(JSON.parse(stored));
+        return JSON.parse(stored);
       } catch (e) {
         console.error('Failed to parse recent cities:', e);
+        return [];
       }
     }
-  }, []);
+    return [];
+  });
 
   // Save to localStorage when updated
   useEffect(() => {

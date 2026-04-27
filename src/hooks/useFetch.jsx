@@ -61,7 +61,7 @@ function useFetch(url, options = {}) {
         abortControllerRef.current.abort();
       }
     };
-  }, [url, options.skipCache]);
+  }, [url, options.skipCache, options.axiosConfig, options.noCache]);
 
   return { data, loading, error };
 }

@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function BookSearch() {
-  const [books, setBooks] = useState([]);
   const [validBooks, setValidBooks] = useState([]);
   const [invalidCount, setInvalidCount] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -36,7 +35,6 @@ function BookSearch() {
         
         if (res.data && res.data.docs) {
           const allBooks = res.data.docs;
-          setBooks(allBooks);
           
           const filtered = allBooks.filter(isValidBook);
           setValidBooks(filtered.map(transformBook));

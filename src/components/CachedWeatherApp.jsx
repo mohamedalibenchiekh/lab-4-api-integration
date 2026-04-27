@@ -39,7 +39,7 @@ function CachedWeatherApp() {
         
         setWeather(weatherData);
         setFromCache(false);
-      } catch (err) {
+      } catch {
         if (!weather) {
           setError('Failed to fetch weather data');
         }
@@ -49,7 +49,7 @@ function CachedWeatherApp() {
     };
 
     fetchWeather();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (loading) return <div className="loading">Loading weather...</div>;
   if (error && !weather) return <div className="error">{error}</div>;
