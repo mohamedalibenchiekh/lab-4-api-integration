@@ -9,11 +9,13 @@ import CommitHistory from './components/CommitHistory';
 import PaginatedPosts from './components/PaginatedPosts';
 import CancelableDataFetcher from './components/CancelableDataFetcher';
 import AdvancedSearch from './components/AdvancedSearch';
+import CachedPokemon from './components/CachedPokemon';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <CachedPokemon />
       <AdvancedSearch />
       <CancelableDataFetcher />
       <PaginatedPosts />
