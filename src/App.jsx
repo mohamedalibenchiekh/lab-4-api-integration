@@ -6,11 +6,13 @@ import GitHubUserLookup from './components/GitHubUserLookup';
 import SlowAPIComponent from './components/SlowAPIComponent';
 import BookSearch from './components/BookSearch';
 import CommitHistory from './components/CommitHistory';
+import PaginatedPosts from './components/PaginatedPosts';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <PaginatedPosts />
       <CommitHistory />
       <BookSearch />
       <SlowAPIComponent />
