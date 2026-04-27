@@ -8,11 +8,13 @@ import BookSearch from './components/BookSearch';
 import CommitHistory from './components/CommitHistory';
 import PaginatedPosts from './components/PaginatedPosts';
 import CancelableDataFetcher from './components/CancelableDataFetcher';
+import AdvancedSearch from './components/AdvancedSearch';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <AdvancedSearch />
       <CancelableDataFetcher />
       <PaginatedPosts />
       <CommitHistory />
