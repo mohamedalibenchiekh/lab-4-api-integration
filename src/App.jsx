@@ -10,11 +10,13 @@ import PaginatedPosts from './components/PaginatedPosts';
 import CancelableDataFetcher from './components/CancelableDataFetcher';
 import AdvancedSearch from './components/AdvancedSearch';
 import CachedPokemon from './components/CachedPokemon';
+import CachedWeatherApp from './components/CachedWeatherApp';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <CachedWeatherApp />
       <CachedPokemon />
       <AdvancedSearch />
       <CancelableDataFetcher />
