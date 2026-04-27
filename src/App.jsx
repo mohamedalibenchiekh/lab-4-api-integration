@@ -1,5 +1,6 @@
 import PokemonList from './components/PokemonList';
 import UserSearch from './components/UserSearch';
+import AddPostForm from './components/AddPostForm';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <PokemonList />
       <UserSearch />
+      <AddPostForm />
     </div>
   );
 }
